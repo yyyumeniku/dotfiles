@@ -1,0 +1,60 @@
+[global]
+    monitor = 0
+    follow = none
+    origin = top-right
+    offset = (0, 0)
+    width = 360
+    height = (0, 140)
+    scale = 0
+    notification_limit = 5
+    history_length = 100
+    sticky_history = yes
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    line_height = 0
+    separator_height = 0
+    vertical_padding = 0
+    horizontal_padding = 0
+    gap = 0
+    separator_color = frame
+    font = "Hack 11"
+    icon_path = /usr/share/icons/AdwaitaLegacy:/usr/share/icons/Adwaita:/usr/share/icons/hicolor
+    frame_width = 0
+    frame_color = "#00000000"
+    corner_radius = 0
+    transparency = 0
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 96
+    progress_bar = true
+    progress_bar_height = 6
+    progress_bar_frame_width = 0
+    progress_bar_min_width = 0
+    progress_bar_max_width = 360
+    show_indicators = no
+    stack_duplicates = true
+    hide_duplicate_count = no
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = do_action
+    browser = /usr/bin/xdg-open
+    dmenu = "/usr/bin/dmenu -p dunst"
+
+[urgency_low]
+    background = "#000000"
+    foreground = "#ffffff"
+    timeout = 6
+    highlight = "#ffffff"
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#ffffff"
+    timeout = 6
+    highlight = "#ffffff"
+
+[urgency_critical]
+    background = "#000000"
+    foreground = "#ff5555"
+    timeout = 0
+    highlight = "#ff5555"

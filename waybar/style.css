@@ -1,0 +1,63 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Hack;
+  font-size: 13px;
+  min-height: 0;
+  transition: none;
+  animation: none;
+}
+
+window#waybar {
+  background: #000000;
+  color: #ffffff;
+}
+
+button,
+button:hover,
+button:active,
+button:checked {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: none;
+  animation: none;
+}
+
+#workspaces button {
+  color: #5c5c5c;
+  padding: 0 3px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#workspaces button:hover {
+  color: #5c5c5c;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#clock,
+#clock-date,
+#tray {
+  padding: 0 10px;
+  color: #ffffff;
+}
+
+#cpu,
+#memory,
+#pulseaudio {
+  padding: 0 5px;
+  color: #ffffff;
+}

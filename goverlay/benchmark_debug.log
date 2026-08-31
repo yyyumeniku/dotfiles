@@ -1,0 +1,38 @@
+[  8497 ms] *** PREVIEW BUTTON CLICK - RUNNING PASCUBE ***
+[  9666 ms] BenchmarkTimerTick: WasRunning=1 Started=0 StartTicks=0
+[  9686 ms] BenchmarkTimerTick: IsProcessRunningPure = 1
+[  9686 ms] BenchmarkTimerTick: Final IsRunning=1
+[  9686 ms] BenchmarkTimerTick: pascube started successfully in process table.
+[ 10667 ms] BenchmarkTimerTick: WasRunning=1 Started=1 StartTicks=0
+[ 10687 ms] BenchmarkTimerTick: IsProcessRunningPure = 1
+[ 10687 ms] BenchmarkTimerTick: Final IsRunning=1
+[ 11666 ms] BenchmarkTimerTick: WasRunning=1 Started=1 StartTicks=0
+[ 11686 ms] BenchmarkTimerTick: IsProcessRunningPure = 1
+[ 11686 ms] BenchmarkTimerTick: Final IsRunning=1
+[ 12666 ms] BenchmarkTimerTick: WasRunning=1 Started=1 StartTicks=0
+[ 12685 ms] BenchmarkTimerTick: IsProcessRunningPure = 1
+[ 12685 ms] BenchmarkTimerTick: Final IsRunning=1
+[ 13666 ms] BenchmarkTimerTick: WasRunning=1 Started=1 StartTicks=0
+[ 13685 ms] BenchmarkTimerTick: IsProcessRunningPure = 1
+[ 13685 ms] BenchmarkTimerTick: Final IsRunning=1
+[ 14666 ms] BenchmarkTimerTick: WasRunning=1 Started=1 StartTicks=0
+[ 14684 ms] BenchmarkTimerTick: IsProcessRunningPure = 1
+[ 14685 ms] BenchmarkTimerTick: Final IsRunning=1
+[ 15666 ms] BenchmarkTimerTick: WasRunning=1 Started=1 StartTicks=0
+[ 15686 ms] BenchmarkTimerTick: IsProcessRunningPure = 1
+[ 15686 ms] BenchmarkTimerTick: Final IsRunning=1
+[ 16666 ms] BenchmarkTimerTick: WasRunning=1 Started=1 StartTicks=0
+[ 16685 ms] BenchmarkTimerTick: IsProcessRunningPure = 0
+[ 16741 ms] BenchmarkTimerTick: pgrep fallback exit code = 1
+[ 16741 ms] BenchmarkTimerTick: Final IsRunning=0
+[ 16741 ms] BenchmarkTimerTick: pascube terminated. Results shown in PasCube overlay.
+[ 16741 ms] CopyPasCubeLogs: pascube_debug.log not found at /usr/lib/pascube_debug.log
+[ 16741 ms] CopyPasCubeLogs: pascube_thread.log not found at /usr/lib/pascube_thread.log
+[ 20700 ms] >> mangohudLabelClick BEGIN
+[ 20831 ms] << mangohudLabelClick END
+[ 30138 ms] >> tweaksLabelClick BEGIN
+[ 31631 ms] >> vkbasaltLabelClick BEGIN
+[ 32508 ms] >> optiscalerLabelClick BEGIN
+[ 32683 ms] << optiscalerLabelClick END
+[ 34290 ms] >> mangohudLabelClick BEGIN
+[ 34483 ms] << mangohudLabelClick END

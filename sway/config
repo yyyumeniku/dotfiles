@@ -1,0 +1,169 @@
+### Variables
+
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Your preferred terminal emulator
+set $term foot
+
+# Your preferred application launcher
+
+set $menu fuzzel
+
+### Output configuration
+
+output * bg /home/gabriel/Documents/Wallpaper/Yosemite 2.jpg fill
+
+output DP-1 resolution 2560x1440@239.97Hz
+output DP-1 scale 1.5
+
+# Fractional scaling via xwayland-satellite
+xwayland disable
+
+### Idle configuration
+
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym ctrl++alt+t exec $term
+
+    # Kill focused window
+    bindsym $mod+q kill
+
+    # Start your launcher (dwindle-style tiling)
+    bindsym alt+space exec $menu
+
+    floating_modifier $mod normal
+
+    # Reload the configuration file
+    bindsym $mod+Shift+c reload
+
+    # Exit sway (logs you out of your Wayland session)
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#
+# Moving around:
+#
+
+    # Or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+#
+# Workspaces:
+#
+    # Switch to workspace
+    
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+    
+    # Move focused container to workspace
+    
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+
+#
+# Layout stuff:
+#
+
+    # Make the current focus fullscreen
+    bindsym F11 fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+Shift+space focus mode_toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+s move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+s scratchpad show
+#
+# Utilities:
+#
+    # Special keys to adjust volume via volume.sh (shows a dunst notification)
+    bindsym --locked XF86AudioMute exec ~/.config/sway/volume.sh mute
+    bindsym --locked XF86AudioLowerVolume exec ~/.config/sway/volume.sh down
+    bindsym --locked XF86AudioRaiseVolume exec ~/.config/sway/volume.sh up
+    bindsym --locked XF86AudioMicMute exec ~/.config/sway/volume.sh mic
+
+    # Special keys to control media via playerctl
+    bindsym --locked XF86AudioPlay exec playerctl play-pause
+    bindsym --locked XF86AudioPause exec playerctl play-pause
+    bindsym --locked XF86AudioPrev exec playerctl previous
+    bindsym --locked XF86AudioNext exec playerctl next
+    bindsym --locked XF86AudioStop exec playerctl stop
+
+    # Special keys to adjust brightness via brightnessctl
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+
+    # Screenshots (KDE-Spectacle style): Print = region, Shift+Print = full screen
+    bindsym Print exec ~/.config/sway/screenshot.sh
+    bindsym Shift+Print exec ~/.config/sway/screenshot.sh --full
+
+    # Alt-tab style window switching via fuzzel
+    bindsym $mod+Tab exec ~/.config/sway/window-switch.sh
+
+    focus_follows_mouse no
+    #default_border pixel 0
+    default_border pixel 2
+
+    # Window border colors: white = focused, transparent = unfocused/inactive
+    # (transparent border = border blends into the wallpaper, per the r/swaywm trick)
+    client.focused          #ffffff  #ffffff  #000000 #ffffff  #ffffff
+    client.focused_inactive #00000000 #00000000 #ffffff #00000000 #00000000
+    client.unfocused        #00000000 #00000000 #ffffff #00000000 #00000000
+
+    gaps inner 10
+    gaps outer 5
+
+exec xwayland-satellite :0
+exec wl-paste --watch cliphist store
+exec waybar
+exec dunst
+exec /usr/bin/autotiling-rs
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+include /etc/sway/config.d/*
+

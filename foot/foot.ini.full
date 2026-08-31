@@ -1,0 +1,16 @@
+[main]
+font=Hack:size=13
+dpi-aware=yes
+selection-target=both
+
+[cursor]
+style=beam
+
+[colors-dark]
+alpha=0.92
+cursor=ffffff 000000
+
+[key-bindings]
+search-start=Control+Shift+f
+font-increase=Control+plus
+font-decrease=Control+minus

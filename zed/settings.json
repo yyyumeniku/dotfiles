@@ -1,0 +1,108 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "existing_window",
+  "restore_on_startup": "launchpad",
+  "disable_ai": true,
+  "global_lsp_settings": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": false
+  },
+  "diff_view_style": "unified",
+  "use_system_window_tabs": false,
+  "pane_split_direction_horizontal": "up",
+  "pane_split_direction_vertical": "left",
+  "bottom_dock_layout": "left_aligned",
+  "title_bar": {
+    "button_layout": "platform_default",
+    "show_user_picture": true,
+    "show_user_menu": true,
+    "show_sign_in": true,
+    "show_branch_status_icon": true
+  },
+  "debugger": {
+    "button": false
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "line_endings_button": false,
+    "active_language_button": false
+  },
+  "prettier": {
+    "allowed": true
+  },
+  "toolbar": {
+    "agent_review": false,
+    "quick_actions": true,
+    "breadcrumbs": true
+  },
+  "agent": {
+    "button": false,
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false
+  },
+  "tabs": {
+    "show_close_button": "hover",
+    "git_status": true,
+    "file_icons": true
+  },
+  "icon_theme": "JetBrains Icons Dark",
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "terminal": {
+    "copy_on_select": true,
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "bell": "system",
+    "dock": "left"
+  },
+  "project_panel": {
+    "show_diagnostics": "off",
+    "button": true,
+    "hide_root": false,
+    "git_status_indicator": true,
+    "bold_folder_labels": false,
+    "dock": "left"
+  },
+  "git_panel": {
+    "show_count_badge": true,
+    "tree_view": true,
+    "file_icons": true,
+    "dock": "left"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": "Carbonfox - blurred",
+}
