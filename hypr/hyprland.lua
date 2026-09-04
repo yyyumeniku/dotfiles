@@ -17,7 +17,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal = "foot"
+local terminal = "footclient" -- use footclient; the foot server is started at login
 local fileManager = "dolphin"
 local menu = "fuzzel"
 
@@ -33,6 +33,8 @@ local menu = "fuzzel"
 hl.on("hyprland.start", function () 
   -- Set a fixed wallpaper from ~/Documents/Wallpaper with swaybg
   hl.exec_cmd("swaybg --image /home/gabriel/Documents/Wallpaper/wallhaven-gp62o7.png &")
+
+  hl.exec_cmd("foot --server &")
 end)
 
 
