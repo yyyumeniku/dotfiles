@@ -1,14 +1,14 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 22,
+  "height": 25,
   "spacing": 12,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock#date"],
+  "modules-right": ["tray", "custom/cpu", "custom/memory", "custom/pulseaudio", "clock#date"],
   "tray": {
     "spacing": 10,
-    "icon-size": 14,
+    "icon-size": 14
   },
   "hyprland/workspaces": {
     "format": "{name}",
@@ -16,21 +16,19 @@
       "*": [1, 2, 3, 4]
     }
   },
-  "cpu": {
-    "interval": 5,
-    "format": "\uf2db  {usage}%"
-  },
-  "memory": {
+  "custom/cpu": {
+    "exec": "~/.config/waybar/stats cpu",
     "interval": 2,
-    "format": "\uefc5  {used:0.1f}G",
-    "tooltip-format": "\uefc5 {used:0.1f}G / {total:0.1f}G ({percentage}%)"
+    "return-type": "json"
   },
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "\uf026  {volume}%",
-    "format-icons": {
-      "default": ["\uf026", "\uf027", "\uf028"]
-    }
+  "custom/memory": {
+    "exec": "~/.config/waybar/stats memory",
+    "interval": 1,
+    "return-type": "json"
+  },
+  "custom/pulseaudio": {
+    "exec": "~/.config/waybar/stats volume-loop",
+    "return-type": "json"
   },
   "clock#date": {
     "format": "{:%Y-%m-%d}",
