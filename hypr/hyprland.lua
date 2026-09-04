@@ -35,6 +35,8 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("swaybg --image /home/gabriel/Documents/Wallpaper/wallhaven-gp62o7.png &")
 
   hl.exec_cmd("foot --server &")
+
+  hl.exec_cmd("waybar &")
 end)
 
 

@@ -3,19 +3,16 @@
   "position": "top",
   "height": 30,
   "spacing": 6,
-  "modules-left": ["sway/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock#date"],
   "tray": {
     "spacing": 10
   },
-  "sway/workspaces": {
+  "hyprland/workspaces": {
     "format": "{name}",
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": []
+      "*": [1, 2, 3, 4]
     }
   },
   "cpu": {
