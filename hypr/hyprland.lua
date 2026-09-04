@@ -164,7 +164,33 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
+
+local FLOAT_SCALE = 0.7
+local shrunkOnFloat = {}
+hl.bind(mainMod .. " + SPACE", function()
+    local win = hl.get_active_window()
+    if not win or not win.mapped then return end
+
+    if win.floating then
+        hl.dispatch(hl.dsp.window.float({ action = "unset" }))
+        return
+    end
+
+    local tiledW, tiledH = 0, 0
+    if type(win.size) == "table" then
+        tiledW, tiledH = win.size.x or 0, win.size.y or 0
+    end
+    hl.dispatch(hl.dsp.window.float({ action = "set" }))
+
+    local fwin = hl.get_active_window()
+    if fwin and type(fwin.size) == "table" and tiledW > 0
+       and not shrunkOnFloat[win.address]
+       and (fwin.size.x or 0) >= tiledW * 0.95 then
+        shrunkOnFloat[win.address] = true
+        hl.dispatch(hl.dsp.window.resize({ x = math.floor(tiledW * FLOAT_SCALE), y = math.floor(tiledH * FLOAT_SCALE) }))
+        hl.dispatch(hl.dsp.window.center())
+    end
+end)
 hl.bind( "ALT + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
