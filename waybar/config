@@ -1,13 +1,14 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 30,
-  "spacing": 6,
+  "height": 22,
+  "spacing": 12,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock#date"],
   "tray": {
-    "spacing": 10
+    "spacing": 10,
+    "icon-size": 14,
   },
   "hyprland/workspaces": {
     "format": "{name}",

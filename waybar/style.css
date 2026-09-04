@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   font-family: "Hack Nerd Font";
-  font-size: 13px;
+  font-size: 12px;
   min-height: 0;
   transition: none;
   animation: none;
@@ -26,7 +26,7 @@ button:checked {
 
 #workspaces button {
   color: #5c5c5c;
-  padding: 0 3px;
+  padding: 0 1px;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -51,14 +51,14 @@ button:checked {
 #clock,
 #clock-date,
 #tray {
-  padding: 0 10px;
+  padding: 0 3px;
   color: #ffffff;
 }
 
 #cpu,
 #memory,
 #pulseaudio {
-  padding: 0 9px;
+  padding: 0 3px;
   color: #ffffff;
 }
 
